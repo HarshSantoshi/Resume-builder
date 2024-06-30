@@ -1,10 +1,14 @@
-import React from 'react'
-
+import React, { Suspense } from 'react'
+import {Route , Routes} from "react-router-dom"
+import { Authentication, HomeScreen } from '../pages'
 const App = () => {
   return (
-    <div className='font-bold container bg-slate-600'>
-      App
-    </div>
+    <Suspense fallback={<div>Loading...</div>}>
+        <Routes>
+            <Route path="/*" element={<HomeScreen/>} />
+            <Route path="/auth" element={<Authentication/>} />
+        </Routes>
+    </Suspense>
   )
 }
 
