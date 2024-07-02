@@ -29,7 +29,6 @@ const CreateTemplate = () => {
   const {
     data: templates,
     isLoading: templateIsLoading,
-    isError: templateIsError,
     refetch: templateIsRefetch,
   } = useTemplates();
   const {data : user , isLoading   }  = useUser();
@@ -153,7 +152,10 @@ const CreateTemplate = () => {
     if(!isLoading && !adminIds.includes(user?.uid)){
       naviagate('/' , {replace:true})
     }
-  },[user , isLoading])
+  },[user , isLoading,naviagate])
+  if(!user){
+    naviagate("/auth" , {replace:true})
+  }
 
   return (
     <div className="w-full px-4 lg:px-10 2xl:px-32 py-4 grid grid-cols-1 lg:grid-cols-12">
@@ -274,7 +276,7 @@ const CreateTemplate = () => {
                   >
                     <img
                       src={template?.imageURL}
-                      alt="image"
+                      alt=""
                       className="w-full h-full"
                     />
                     <div className="absolute bottom-0 right-1/2 w-8 h-8 cursor-pointer rounded-full flex items-center justify-center bg-red-500">

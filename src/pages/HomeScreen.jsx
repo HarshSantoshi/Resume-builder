@@ -3,12 +3,13 @@ import {Header, MainSpinner} from '../components'
 import { Route, Routes } from 'react-router-dom'
 import {HomeContainer} from '../containers'
 import {CreateResume, CreateTemplate, TemplateDesignDetail, UserProfile} from '../pages'
+import Footer from '../containers/Footer'
 
 const HomeScreen = () => {
   return (
     <div className='w-full flex items-center justify-center flex-col'>
       <Header/>
-      <main className='w-full'>
+      <main className='w-full"'>
         <Suspense fallback={<MainSpinner/>}>
         <Routes>
           <Route path='/' element={<HomeContainer/>} />
@@ -18,6 +19,7 @@ const HomeScreen = () => {
           <Route path='/resumedetail/:templateID' element={<TemplateDesignDetail/>} />
         </Routes>
         </Suspense>
+        <Footer/>
       </main>
     </div>
   )

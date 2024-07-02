@@ -24,6 +24,9 @@ const UserProfile = () => {
   if (templateIsLoading) {
     return <MainSpinner />;
   }
+  if(!user){
+    navigate('/auth' , {replace:true})
+  }
   return (
     <div className="w-full flex flex-col items-center justify-center">
       <div className="w-full h-64 relative">

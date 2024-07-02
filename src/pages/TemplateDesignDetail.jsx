@@ -1,6 +1,6 @@
 import React from "react";
 import { useQuery } from "react-query";
-import { Link, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import {
   getTemplateDetails,
   saveToCollections,
@@ -27,6 +27,7 @@ const TemplateDesignDetail = () => {
   );
   const { data: user, refetch: userRefetch } = useUser();
   const { data: templates, refetch: templateRefetch } = useTemplates();
+  const navigate = useNavigate();
   if (isLoading) {
     return <MainSpinner />;
   }
@@ -46,6 +47,10 @@ const TemplateDesignDetail = () => {
     templateRefetch();
     refetch();
   };
+
+  if(!user){
+    navigate('/auth' , {replace:true})
+  }
 
   return (
     <div className="w-full flex flex-col items-center justify-center px-4 py-10">
