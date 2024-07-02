@@ -119,9 +119,9 @@ const CreateTemplate = () => {
       imageURL: imageAsset.uri,
       tags: selectedTag,
       name:
-        templates && templates.length > 0
-          ? `Template ${templates.length + 1}`
-          : "Template1",
+        templates && templates?.length > 0
+          ? `Template ${templates?.length + 1}`
+          : "Template 1",
       timestamp: timestamp,
     };
     await setDoc(doc(db, "templates", id), _doc)
@@ -166,7 +166,7 @@ const CreateTemplate = () => {
           <p className="text-gray-600 font-semibold">Template ID : </p>
           <p className="font-bold">
             {templates && templates.length > 0
-              ? ` ${templates.length + 1}`
+              ? ` ${templates?.length + 1}`
               : " 1"}
           </p>
         </div>
@@ -264,7 +264,7 @@ const CreateTemplate = () => {
           </>
         ) : (
           <>
-            {templates && templates.length > 0 ? (
+            {templates && templates?.length > 0 ? (
               <>
                 <div className="w-full h-full grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 gap-4">
                 {templates?.map((template) => (
