@@ -9,7 +9,7 @@ const HomeScreen = () => {
   return (
     <div className='w-full flex items-center justify-center flex-col'>
       <Header/>
-      <main className='w-full"'>
+      <main className='w-full'>
         <Suspense fallback={<MainSpinner/>}>
         <Routes>
           <Route path='/' element={<HomeContainer/>} />

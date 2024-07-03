@@ -23,7 +23,7 @@ const Filter = () => {
     });
   }
   return (
-    <div className="w-full flex items-center justify-start py-1">
+    <div className="w-11/12 m-auto flex items-center justify-start py-1">
       <div
         className="border border-gray-400 rounded-md px-2 py-1 mr-2 cursor-pointer group hover:shadow-md bg-gray-300 relative 
       "

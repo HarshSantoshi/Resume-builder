@@ -23,7 +23,7 @@ const HomeContainer = () => {
   }
   return (
     <>
-    <div className="w-full px-4 lg:px-12 py-6 flex flex-col items-center justify-start">
+    <div className="w-full m-auto px-4 lg:px-12 py-6 flex flex-col items-center justify-start">
       {/* Tags */}
       <Filter />
       {templateError ? (
@@ -32,7 +32,7 @@ const HomeContainer = () => {
         </>
       ) : (
         <>
-          <div className="w-full grid grid-cols-1  md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-5">
+          <div className=" grid grid-cols-1  md:grid-cols-3 lg:grid-cols-3 2xl:grid-cols-4 gap-5">
             <RenderTemplate template={templates} />
           </div>
         </>
