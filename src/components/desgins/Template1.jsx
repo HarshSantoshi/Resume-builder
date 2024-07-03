@@ -58,8 +58,8 @@ const Template1 = () => {
   );
 
   const [formData, setFormData] = useState({
-    fullname: "Karen Richards",
-    professionalTitle: "Professional Title",
+    fullname: "Your Name",
+    professionalTitle: "Your Role",
     personalDescription: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alia minus est culpa id corrupti nobis ullam harum, porro veniam facilis, obcaecati nulla magnam beatae quae at eos! Qui, similique laboriosam?`,
     refererName: "Sara Taylore",
     refererRole: "Director | Company Name",
@@ -492,7 +492,7 @@ const Template1 = () => {
             </div>
           </div>
           <div className="w-full h-auto grid grid-cols-12" ref={resumeRef}>
-            <div className="col-span-4 bg-black flex flex-col items-center justify-start">
+            <div className="col-span-4 bg-slate-500 flex flex-col items-center justify-start">
               <div className="w-full h-80 bg-gray-300 flex items-center justify-center">
                 {!imageAsset.imageURL ? (
                   <React.Fragment>
@@ -521,7 +521,7 @@ const Template1 = () => {
                   <div className="relative w-full h-full overflow-hidden rounded-md">
                     <img
                       src={imageAsset.imageURL}
-                      alt="uploaded image"
+                      alt=""
                       className="w-full h-full object-cover"
                       loading="lazy"
                     />
@@ -543,7 +543,7 @@ const Template1 = () => {
                   <p className="uppercase text-lg font-semibold text-gray-100">
                     Education
                   </p>
-                  <div className="w-full h-[2px] bg-yellow-400 mt-2"></div>
+                  <div className="w-full h-[2px] bg-blue-400 mt-2"></div>
                   <AnimatePresence>
                     {education &&
                       education?.map((edu, i) => (
@@ -559,7 +559,7 @@ const Template1 = () => {
                             value={edu.major}
                             onChange={(e) => handleEducationChange(i, e)}
                             className={`bg-transparent outline-none border-none text-sm font-semibold uppercase  text-gray-100  ${
-                              isEdit && "text-yellow-400 w-full"
+                              isEdit && "text-blue-400 w-full"
                             }`}
                           />
 
@@ -611,7 +611,7 @@ const Template1 = () => {
                   <p className="uppercase text-lg font-semibold text-gray-100">
                     Reference
                   </p>
-                  <div className="w-full h-[2px] bg-yellow-400 mt-2"></div>
+                  <div className="w-full h-[2px] bg-blue-400 mt-2"></div>
                   <div className="w-full pl-4 mt-3">
                     <input
                       value={formData.refererName}
@@ -640,7 +640,7 @@ const Template1 = () => {
 
               <div className="w-full flex flex-col items-start justify-start mt-6 gap-6">
                 <div className="w-full grid grid-cols-12">
-                  <div className="col-span-3 w-full h-6 bg-yellow-400"></div>
+                  <div className="col-span-3 w-full h-6 bg-blue-400"></div>
                   <div className="col-span-9">
                     <div className="w-full h-6 bg-[rgba(45,45,45,0.6)] px-3 flex items-center">
                       <p className="text-sm font-semibold text-gray-200">
@@ -662,7 +662,7 @@ const Template1 = () => {
 
                 {/* email */}
                 <div className="w-full grid grid-cols-12">
-                  <div className="col-span-3 w-full h-6 bg-yellow-400"></div>
+                  <div className="col-span-3 w-full h-6 bg-blue-400"></div>
                   <div className="col-span-9">
                     <div className="w-full h-6 bg-[rgba(45,45,45,0.6)] px-3 flex items-center">
                       <p className="text-sm font-semibold text-gray-200">
@@ -684,7 +684,7 @@ const Template1 = () => {
 
                 {/* website */}
                 <div className="w-full grid grid-cols-12">
-                  <div className="col-span-3 w-full h-6 bg-yellow-400"></div>
+                  <div className="col-span-3 w-full h-6 bg-blue-400"></div>
                   <div className="col-span-9">
                     <div className="w-full h-6 bg-[rgba(45,45,45,0.6)] px-3 flex items-center">
                       <p className="text-sm font-semibold text-gray-200">
@@ -707,7 +707,7 @@ const Template1 = () => {
 
                 {/* address */}
                 <div className="w-full grid grid-cols-12">
-                  <div className="col-span-3 w-full h-6 bg-yellow-400"></div>
+                  <div className="col-span-3 w-full h-6 bg-blue-400"></div>
                   <div className="col-span-9">
                     <div className="w-full h-6 bg-[rgba(45,45,45,0.6)] px-3 flex items-center">
                       <p className="text-sm font-semibold text-gray-200">
@@ -737,7 +737,7 @@ const Template1 = () => {
             <div className="col-span-8 flex flex-col items-center justify-start py-6 bg-white">
               <div className="w-full py-6"></div>
               {/* title */}
-              <div className="w-full px-8 py-6 bg-yellow-500">
+              <div className="w-full px-8 py-6 bg-blue-500">
                 <div className="flex items-center justify-start ">
                   <input
                     type="text"
