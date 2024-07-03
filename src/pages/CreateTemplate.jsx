@@ -110,6 +110,10 @@ const CreateTemplate = () => {
     }
   };
   const handleSavePost = async () => {
+    if(imageAsset?.uri === null || formData?.title === ""){
+      toast.error("Complete the form");
+      return ;
+    }
     const timestamp = serverTimestamp();
     const id = `${Date.now()}`;
     const _doc = {

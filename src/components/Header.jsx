@@ -37,10 +37,10 @@ const Header = () => {
     });
   }
   return (
-    <header className="w-full flex bg-white z-50 gap-10 sticky top-0 items-center justify-between px-4 py-3 lg:px-8">
+    <header className="w-full m-auto flex bg-white z-50 gap-10 sticky top-0 items-center justify-between px-4 py-3 lg:px-8">
       {/* LOGO */}
       <Link to="/">
-        <img src={Logo} className="w-10 h-auto object-contain" alt="logo" />
+        <img src={Logo} className="w-10 h-10  object-contain" alt="logo" />
       </Link>
 
       {/* Search field */}

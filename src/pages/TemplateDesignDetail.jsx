@@ -83,14 +83,14 @@ const TemplateDesignDetail = () => {
               <p className="text-lg px-4 font-semibold">{data?.title}</p>
 
               {data?.favourites?.length>0 && (
-                <div className="flex items-center justify-center gap-1">
+                <div className="flex items-center justify-center gap-1 whitespace-nowrap">
                   <BiSolidHeart className="size-5 text-red-700" />
                   <p className="text-lg">{data?.favourites?.length} Likes</p>
                 </div>
               )}
             </div>
             {user && (
-              <div className="flex items-center justify-center gap-3">
+              <div className="flex-wrap w-full flex items-center justify-center gap-3 ">
                 {user?.collections?.includes(data?._id) ? (
                   <>
                     <div
@@ -170,7 +170,7 @@ const TemplateDesignDetail = () => {
         <div className="w-full flex flex-col items-center justify-start px-3 gap-6 col-span-1 lg:col-span-4">
           <div className="w-full h-72 bg-blue-600 overflow-hidden rounded-md relative">
           <div className="absolute inset-0 flex items-center justify-center bg-[rgba(0,0,0,.4)]" style={{background:"url(https://i.pinimg.com/originals/4b/e6/af/4be6af81664803bd8cb09f602e72865a.jpg)", backgroundPosition:"center", backgroundSize:"cover"}}>
-            <Link to="/" className="px-4 py-2 text-slate-100 border rounded-md font-semibold text-lg active:scale-95" >
+            <Link to={`/profile/${user?.uid}`} className="px-4 py-2 text-slate-100 border rounded-md font-semibold text-lg active:scale-95" >
             Your Collections
             </Link>
           </div>
