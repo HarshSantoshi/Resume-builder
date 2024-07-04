@@ -25,7 +25,7 @@ const HomeContainer = () => {
     <>
     <div className="w-full m-auto px-4 lg:px-12 py-6 flex flex-col items-center justify-start">
       {/* Tags */}
-      <Filter />
+      {/* <Filter /> */}
       {templateError ? (
         <>
           <p className="text-lg text-black">Something went wrong</p>
